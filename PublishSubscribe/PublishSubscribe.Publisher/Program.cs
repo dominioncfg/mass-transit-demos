@@ -1,10 +1,10 @@
-namespace Worker.Consumer;
+namespace PublishSubcribe.Publisher;
 
 public class Program
 {
     public static async Task Main(string[] args)
     {
-        Console.Title = "Receiver";
+        Console.Title = "Publisher";
         await CreateHostBuilder(args).Build().RunAsync();
     }
 
@@ -14,8 +14,7 @@ public class Program
            .ConfigureServices((hostContext, services) =>
            {
                services.AddCustomMassTransit();
-               services.AddTransient<IObjectsRepository, InMemoryObjectsRepository>();
+               services.AddHostedService<EventsPublisherBackgroundService>();
            });
     }
-
 }

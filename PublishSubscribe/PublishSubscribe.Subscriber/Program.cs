@@ -1,10 +1,10 @@
-namespace Worker.Consumer;
+namespace PublishSubcribe.Subscriber;
 
 public class Program
 {
     public static async Task Main(string[] args)
     {
-        Console.Title = "Receiver";
+        Console.Title = "Subscriber";
         await CreateHostBuilder(args).Build().RunAsync();
     }
 
