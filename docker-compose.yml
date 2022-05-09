@@ -2,7 +2,12 @@ version: "3.2"
 services:
   rabbitmq:
     image: rabbitmq:3-management-alpine
-    container_name: 'mass-transit-test'
+    container_name: 'mass-transit-rabbit'
     ports:
         - 5672:5672
         - 15672:15672
+  redis:
+    image: redis
+    container_name: 'mass-transit-redis'
+    ports:
+      - "6379:6379"
