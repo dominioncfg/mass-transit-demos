@@ -19,25 +19,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishSubscribe", "PublishSubscribe", "{180AC3E2-BA9B-441F-8AB8-85CADB3C461A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublishSubscribe.Publisher", "PublishSubscribe\PublishSubscribe.Publisher\PublishSubscribe.Publisher.csproj", "{149D5331-0757-4DA1-A3F2-6A302A88BC62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PublishSubscribe.Publisher", "PublishSubscribe\PublishSubscribe.Publisher\PublishSubscribe.Publisher.csproj", "{149D5331-0757-4DA1-A3F2-6A302A88BC62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublishSubscribe.Subscriber", "PublishSubscribe\PublishSubscribe.Subscriber\PublishSubscribe.Subscriber.csproj", "{936CE4D1-9897-482F-9C11-C2010B0300B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PublishSubscribe.Subscriber", "PublishSubscribe\PublishSubscribe.Subscriber\PublishSubscribe.Subscriber.csproj", "{936CE4D1-9897-482F-9C11-C2010B0300B3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rpc", "Rpc", "{41B68F02-CF32-43C1-9C1A-CDCAEABDF9CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rpc.Server", "Rpc\Rpc.Server\Rpc.Server.csproj", "{19CC8310-493C-4B50-8502-25AE624A2BD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rpc.Server", "Rpc\Rpc.Server\Rpc.Server.csproj", "{19CC8310-493C-4B50-8502-25AE624A2BD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rpc.Client", "Rpc\Rpc.Client\Rpc.Client.csproj", "{D2EBD7CF-F050-4575-9FB1-C2779FF69FFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rpc.Client", "Rpc\Rpc.Client\Rpc.Client.csproj", "{D2EBD7CF-F050-4575-9FB1-C2779FF69FFA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sagas", "Sagas", "{4695F5BB-4EFF-4200-8B59-A1B8E1704C9F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StateMachine", "StateMachine", "{DA433F00-938F-46BA-BDCF-AAEF382D99F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.StateMachine.Initiator", "Sagas\StateMachine\Saga.StateMachine.Initiator\Saga.StateMachine.Initiator.csproj", "{8F7CA10B-0DBC-4A83-A89B-0658E37A87FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.StateMachine.Initiator", "Sagas\StateMachine\Saga.StateMachine.Initiator\Saga.StateMachine.Initiator.csproj", "{8F7CA10B-0DBC-4A83-A89B-0658E37A87FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.StateMachine.SecondService", "Sagas\StateMachine\Saga.StateMachine.SecondService\Saga.StateMachine.SecondService.csproj", "{41820424-33C1-4736-B4D6-B458A105BFAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.StateMachine.SecondService", "Sagas\StateMachine\Saga.StateMachine.SecondService\Saga.StateMachine.SecondService.csproj", "{41820424-33C1-4736-B4D6-B458A105BFAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.StateMachine.ThirdService", "Sagas\StateMachine\Saga.StateMachine.ThirdService\Saga.StateMachine.ThirdService.csproj", "{56E17479-F697-4B99-AAAE-0D964399CC37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.StateMachine.ThirdService", "Sagas\StateMachine\Saga.StateMachine.ThirdService\Saga.StateMachine.ThirdService.csproj", "{56E17479-F697-4B99-AAAE-0D964399CC37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer", "Consumer", "{2D9A5205-9235-42F3-AA99-2F302C651B8F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.Consumer.Initiator", "Sagas\Consumer\Saga.Consumer.Initiator\Saga.Consumer.Initiator.csproj", "{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.Consumer.SecondService", "Sagas\Consumer\Saga.Consumer.SecondService\Saga.Consumer.SecondService.csproj", "{B1540407-CE80-408C-B678-9EB27448F987}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.Consumer.ThirdService", "Sagas\Consumer\Saga.Consumer.ThirdService\Saga.Consumer.ThirdService.csproj", "{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -169,6 +177,42 @@ Global
 		{56E17479-F697-4B99-AAAE-0D964399CC37}.Release|x64.Build.0 = Release|Any CPU
 		{56E17479-F697-4B99-AAAE-0D964399CC37}.Release|x86.ActiveCfg = Release|Any CPU
 		{56E17479-F697-4B99-AAAE-0D964399CC37}.Release|x86.Build.0 = Release|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Debug|x64.Build.0 = Debug|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Debug|x86.Build.0 = Debug|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Release|x64.ActiveCfg = Release|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Release|x64.Build.0 = Release|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Release|x86.ActiveCfg = Release|Any CPU
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A}.Release|x86.Build.0 = Release|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Debug|x64.Build.0 = Debug|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Debug|x86.Build.0 = Debug|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Release|x64.ActiveCfg = Release|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Release|x64.Build.0 = Release|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Release|x86.ActiveCfg = Release|Any CPU
+		{B1540407-CE80-408C-B678-9EB27448F987}.Release|x86.Build.0 = Release|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Debug|x64.Build.0 = Debug|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Debug|x86.Build.0 = Debug|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Release|x64.ActiveCfg = Release|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Release|x64.Build.0 = Release|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Release|x86.ActiveCfg = Release|Any CPU
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -184,6 +228,10 @@ Global
 		{8F7CA10B-0DBC-4A83-A89B-0658E37A87FA} = {DA433F00-938F-46BA-BDCF-AAEF382D99F3}
 		{41820424-33C1-4736-B4D6-B458A105BFAC} = {DA433F00-938F-46BA-BDCF-AAEF382D99F3}
 		{56E17479-F697-4B99-AAAE-0D964399CC37} = {DA433F00-938F-46BA-BDCF-AAEF382D99F3}
+		{2D9A5205-9235-42F3-AA99-2F302C651B8F} = {4695F5BB-4EFF-4200-8B59-A1B8E1704C9F}
+		{DC79F3F1-8B6D-4B1B-9DB1-932B9A2F180A} = {2D9A5205-9235-42F3-AA99-2F302C651B8F}
+		{B1540407-CE80-408C-B678-9EB27448F987} = {2D9A5205-9235-42F3-AA99-2F302C651B8F}
+		{FEAD0BB2-81CA-4F20-9C09-96458447EA7B} = {2D9A5205-9235-42F3-AA99-2F302C651B8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D048932-5FB2-4681-9D8E-33B30A358D84}

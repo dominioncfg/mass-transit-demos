@@ -1,7 +1,7 @@
-using Contracts.Sagas.StateMachine;
+using Contracts.Sagas.Consumer;
 using MassTransit;
 
-namespace Saga.StateMachine.SecondService;
+namespace Saga.Consumer.SecondService;
 
 public class CancelOrderCommandConsumer : IConsumer<CancelOrderCommand>
 {

@@ -1,8 +1,8 @@
 ﻿using MassTransit;
 using Contracts;
-using Contracts.Sagas.StateMachine;
+using Contracts.Sagas.Consumer;
 
-namespace Saga.StateMachine.Initiator;
+namespace Saga.Consumer.Initiator;
 
 public static class ConfigurationExtensions
 {
@@ -11,9 +11,9 @@ public static class ConfigurationExtensions
         services.AddMassTransit(x =>
         {
             x.SetKebabCaseEndpointNameFormatter();
-
-            x.AddSagaStateMachine<OrderStateMachine, OrderState>()
-                .RedisRepository("127.0.0.1");
+            
+            x.AddSaga<OrderSaga>()
+              .InMemoryRepository();
 
             x.UsingRabbitMq((context, cfg) =>
             {
@@ -34,9 +34,9 @@ public static class ConfigurationExtensions
 
     private static void ConfigureSendCommands()
     {
-        EndpointConvention.Map<SubmitOrderCommand>(new Uri($"queue:{ConfigurationConstants.StateMachineSagaSecondService}"));
-        EndpointConvention.Map<CancelOrderCommand>(new Uri($"queue:{ConfigurationConstants.StateMachineSagaSecondService}"));
+        EndpointConvention.Map<SubmitOrderCommand>(new Uri($"queue:{ConfigurationConstants.ConsumerMachineSagaSecondService}"));
+        EndpointConvention.Map<CancelOrderCommand>(new Uri($"queue:{ConfigurationConstants.ConsumerMachineSagaSecondService}"));
 
-        EndpointConvention.Map<RequestOrderFulfillmentCommand>(new Uri($"queue:{ConfigurationConstants.StateMachineSagaThirdService}"));
+        EndpointConvention.Map<RequestOrderFulfillmentCommand>(new Uri($"queue:{ConfigurationConstants.ConsumerMachineSagaThirdService}"));
     }
 }

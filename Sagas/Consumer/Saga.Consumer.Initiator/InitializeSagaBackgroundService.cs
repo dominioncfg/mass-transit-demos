@@ -1,7 +1,7 @@
-using Contracts.Sagas.StateMachine;
+using Contracts.Sagas.Consumer;
 using MassTransit;
 
-namespace Saga.StateMachine.Initiator;
+namespace Saga.Consumer.Initiator;
 
 public class InitializeSagaBackgroundService : BackgroundService
 {

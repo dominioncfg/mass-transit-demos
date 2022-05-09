@@ -1,4 +1,6 @@
-﻿namespace Contracts;
+﻿using MassTransit;
+
+namespace Contracts.Sagas.Consumer;
 
 public record SubmitOrderCommand
 {
@@ -8,11 +10,13 @@ public record SubmitOrderCommand
 
 }
 
-public record OrderSubmittedEvent
+public record OrderSubmittedEvent: CorrelatedBy<Guid>
 {
     public Guid Id { get; init; }
     public string ClientName { get; init; } = string.Empty;
     public int Total { get; init; }
+
+    public Guid CorrelationId => Id;
 }
 
 
@@ -21,14 +25,16 @@ public record RequestOrderFulfillmentCommand
     public Guid Id { get; init; }
 }
 
-public record OrderFulfilledEvent
+public record OrderFulfilledEvent : CorrelatedBy<Guid>
 {
     public Guid Id { get; init; }
+    public Guid CorrelationId => Id;
 }
 
-public record OrderFulfillmentFailedEvent
+public record OrderFulfillmentFailedEvent : CorrelatedBy<Guid>
 {
     public Guid Id { get; init; }
+    public Guid CorrelationId => Id;
 }
 
 public record CancelOrderCommand
@@ -37,7 +43,8 @@ public record CancelOrderCommand
 
 }
 
-public class OrderCancelledEvent
+public class OrderCancelledEvent : CorrelatedBy<Guid>
 {
     public Guid Id { get; init; }
+    public Guid CorrelationId => Id;
 }

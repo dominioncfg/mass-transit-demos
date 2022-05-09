@@ -1,11 +1,13 @@
 ﻿using MassTransit;
-using Contracts;
+using Contracts.Sagas.StateMachine;
 
 
 namespace Saga.StateMachine.Initiator;
 
 public class OrderStateMachine : MassTransitStateMachine<OrderState>
 {
+
+#nullable disable
     private readonly ILogger<OrderStateMachine> _logger;
     public State SubmittedState { get; private set; }
     public State FailedFulfillementState { get; private set; }
@@ -13,7 +15,7 @@ public class OrderStateMachine : MassTransitStateMachine<OrderState>
     public Event<OrderFulfilledEvent> OrderFulfilledEvent { get; private set; }
     public Event<OrderFulfillmentFailedEvent> OrderFulfillmentFailedEvent { get; private set; }
     public Event<OrderCancelledEvent> OrderCancelledEvent { get; private set; }
-
+#nullable enable
 
     public OrderStateMachine(ILogger<OrderStateMachine> logger)
     {

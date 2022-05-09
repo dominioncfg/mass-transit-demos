@@ -1,7 +1,7 @@
-using Contracts.Sagas.StateMachine;
+using Contracts.Sagas.Consumer;
 using MassTransit;
 
-namespace Saga.StateMachine.ThirdService;
+namespace Saga.Consumer.ThirdService;
 
 public class RequestOrderFulfillmentCommandConsumer : IConsumer<RequestOrderFulfillmentCommand>
 {
