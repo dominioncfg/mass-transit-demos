@@ -1,7 +1,6 @@
 ﻿using MassTransit;
 using Contracts.Sagas.StateMachine;
 
-
 namespace Saga.StateMachine.Initiator;
 
 public class OrderStateMachine : MassTransitStateMachine<OrderState>
@@ -35,10 +34,7 @@ public class OrderStateMachine : MassTransitStateMachine<OrderState>
                 {
                     context.Saga.ClientName = context.Message.ClientName;
                 })
-                .ThenAsync(async context => await context.Send(new RequestOrderFulfillmentCommand()
-                {
-                    Id = context.Message.Id,
-                }))
+                .Activity(x => x.OfInstanceType<SendRequestOrderFulfillmentStateMachineActivity>())
                 .TransitionTo(SubmittedState));
 
 
@@ -71,7 +67,5 @@ public class OrderStateMachine : MassTransitStateMachine<OrderState>
 
 
     }
-
-
 }
 

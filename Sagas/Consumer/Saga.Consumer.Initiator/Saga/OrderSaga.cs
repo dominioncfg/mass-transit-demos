@@ -52,7 +52,7 @@ public class OrderSaga :
         return Task.CompletedTask;
     }
 
-    private void LogMessage(object message, Guid id)
+    private static void LogMessage(object message, Guid id)
     {
         //Consumer Sagas dont support dependency injeciton
         Console.WriteLine($"Handled {message.GetType()} with id {id}");

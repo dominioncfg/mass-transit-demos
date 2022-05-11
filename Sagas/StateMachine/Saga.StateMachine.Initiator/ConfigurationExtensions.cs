@@ -12,7 +12,8 @@ public static class ConfigurationExtensions
         {
             x.SetKebabCaseEndpointNameFormatter();
 
-            x.AddSagaStateMachine<OrderStateMachine, OrderState>()
+            x.AddActivitiesFromNamespaceContaining(typeof(OrderState));
+            x.AddSagaStateMachine<OrderStateMachine, OrderState, OrderStateMachineDefinition>()
                 .RedisRepository("127.0.0.1");
 
             x.UsingRabbitMq((context, cfg) =>
