@@ -49,11 +49,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.Consumer.ThirdService"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RoutingSlip", "RoutingSlip", "{31496B9D-5047-409D-965A-DDFE9BB20BEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingSlip.Initiator", "RoutingSlip\RoutingSlip.Initiator\RoutingSlip.Initiator.csproj", "{9BB8B165-9CBB-4BCA-9BA7-71D0DB41A767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutingSlip.Initiator", "RoutingSlip\RoutingSlip.Initiator\RoutingSlip.Initiator.csproj", "{9BB8B165-9CBB-4BCA-9BA7-71D0DB41A767}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingSlip.SecondService", "RoutingSlip\RoutingSlip.SecondService\RoutingSlip.SecondService.csproj", "{A9D2A2C4-9F33-490A-A43D-5D59BEBF6CF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutingSlip.SecondService", "RoutingSlip\RoutingSlip.SecondService\RoutingSlip.SecondService.csproj", "{A9D2A2C4-9F33-490A-A43D-5D59BEBF6CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingSlip.ThirdService", "RoutingSlip\RoutingSlip.ThirdService\RoutingSlip.ThirdService.csproj", "{625E8F2A-1347-4DF5-88B7-527DCD17241B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutingSlip.ThirdService", "RoutingSlip\RoutingSlip.ThirdService\RoutingSlip.ThirdService.csproj", "{625E8F2A-1347-4DF5-88B7-527DCD17241B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scheduler", "Scheduler", "{9A1DEF37-6634-4B3F-8C2B-F042FAECA71E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scheduler.SecondService", "Scheduler\Scheduler.SecondService\Scheduler.SecondService.csproj", "{470656BB-5597-4D3D-9792-4E20D5BDB4A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -257,6 +261,18 @@ Global
 		{625E8F2A-1347-4DF5-88B7-527DCD17241B}.Release|x64.Build.0 = Release|Any CPU
 		{625E8F2A-1347-4DF5-88B7-527DCD17241B}.Release|x86.ActiveCfg = Release|Any CPU
 		{625E8F2A-1347-4DF5-88B7-527DCD17241B}.Release|x86.Build.0 = Release|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Debug|x64.Build.0 = Debug|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Debug|x86.Build.0 = Debug|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Release|x64.ActiveCfg = Release|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Release|x64.Build.0 = Release|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -279,6 +295,7 @@ Global
 		{9BB8B165-9CBB-4BCA-9BA7-71D0DB41A767} = {31496B9D-5047-409D-965A-DDFE9BB20BEB}
 		{A9D2A2C4-9F33-490A-A43D-5D59BEBF6CF9} = {31496B9D-5047-409D-965A-DDFE9BB20BEB}
 		{625E8F2A-1347-4DF5-88B7-527DCD17241B} = {31496B9D-5047-409D-965A-DDFE9BB20BEB}
+		{470656BB-5597-4D3D-9792-4E20D5BDB4A7} = {9A1DEF37-6634-4B3F-8C2B-F042FAECA71E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D048932-5FB2-4681-9D8E-33B30A358D84}

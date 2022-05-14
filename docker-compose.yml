@@ -6,8 +6,24 @@ services:
     ports:
         - 5672:5672
         - 15672:15672
+
   redis:
     image: redis
     container_name: 'mass-transit-redis'
     ports:
       - "6379:6379"
+  
+  sqlserver:
+    image: masstransit/sqlserver-quartz:latest
+    container_name: 'mass-transit-sql-server'
+    ports:
+      - 1433:1433
+  
+  mass-transit-quartz:
+    image: masstransit/quartz:latest
+    container_name: 'mass-transit-quartz-scheduler'
+    environment:
+      MT_Scheduler: 'quartz'
+      MT_Quartz__ConnectionString: 'Server=tcp:sqlserver;Database=quartznet;Persist Security Info=False;User ID=sa;Password=Quartz!DockerP4ss;Encrypt=False;TrustServerCertificate=True;'
+    ports:
+     - "5002:80"

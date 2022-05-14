@@ -24,7 +24,7 @@ public class RunRoutingSlipBackgroundService : BackgroundService
         await _bus.Execute(routingSlip);
     }
 
-    private MassTransitRoutingSlip BuildRoutingSlip(Guid orderId)
+    private static MassTransitRoutingSlip BuildRoutingSlip(Guid orderId)
     {
         var trakingNumber = NewId.NextGuid();
 
