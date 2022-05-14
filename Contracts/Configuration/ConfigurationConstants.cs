@@ -12,4 +12,7 @@ public class ConfigurationConstants
     public const string ConsumerMachineSagaSecondService = "consumer-saga-order-management-service";
     public const string ConsumerMachineSagaThirdService = "consumer-saga-order-fullfilment-service";
 
+
+    public const string BatchingQueueName = "consumer-saga-order-fullfilment-service";
+
 }
