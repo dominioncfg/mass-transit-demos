@@ -27,3 +27,10 @@ services:
       MT_Quartz__ConnectionString: 'Server=tcp:sqlserver;Database=quartznet;Persist Security Info=False;User ID=sa;Password=Quartz!DockerP4ss;Encrypt=False;TrustServerCertificate=True;'
     ports:
      - "5002:80"
+  
+  blob:
+    image: mcr.microsoft.com/azure-storage/azurite  
+    container_name: 'mass-transit-azure-blob'
+    ports:
+      - "10000:10000"
+      - "10001:10001"

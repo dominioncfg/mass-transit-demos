@@ -1,8 +1,9 @@
-﻿using Contracts;
+﻿using Azure.Storage.Blobs;
+using Contracts;
 using MassTransit;
 using System.Reflection;
 
-namespace Batching.Consumer;
+namespace MessageData.Consumer;
 
 public static class ConfigurationExtensions
 {
@@ -14,17 +15,23 @@ public static class ConfigurationExtensions
             x.SetKebabCaseEndpointNameFormatter();
 
             x.AddConsumers(entryAssembly);
+
             x.UsingRabbitMq((context, cfg) =>
             {
+                var client = new BlobServiceClient("UseDevelopmentStorage=true");
+                var repository = client.CreateMessageDataRepository("message-data");
+                cfg.UseMessageData(repository);
+                cfg.UseConcurrencyLimit(1);
+
                 cfg.Host("localhost", "/", h =>
                 {
                     h.Username("guest");
                     h.Password("guest");
                 });
 
-                cfg.ReceiveEndpoint(ConfigurationConstants.BatchingQueueName, e =>
+                cfg.ReceiveEndpoint(ConfigurationConstants.MessageDataQueueName, e =>
                 {
-                    e.ConfigureConsumer<CreateUserCommandConsumer>(context);
+                    e.ConfigureConsumer<CreateUserWithLargeDataCommandConsumer>(context);
                 });               
             });
         });
