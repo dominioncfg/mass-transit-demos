@@ -17,4 +17,7 @@ public class ConfigurationConstants
 
     public const string MessageDataQueueName = "message-data-service";
 
+
+    public const string MiddlewaresQueueName = "middlewares-service";
+
 }
