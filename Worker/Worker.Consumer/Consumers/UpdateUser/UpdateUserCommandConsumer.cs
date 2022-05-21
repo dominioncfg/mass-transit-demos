@@ -3,7 +3,7 @@ using MassTransit;
 
 namespace Worker.Consumer;
 
-public class UpdateUserCommandConsumer : IConsumer<CreateUserCommand>
+public class UpdateUserCommandConsumer : IConsumer<UpdateUserCommand>
 {
     readonly ILogger<UpdateUserCommandConsumer> _logger;
     private readonly IObjectsRepository _objectsRepository;
@@ -14,7 +14,7 @@ public class UpdateUserCommandConsumer : IConsumer<CreateUserCommand>
         _objectsRepository = objectsRepository;
     }
 
-    public async Task Consume(ConsumeContext<CreateUserCommand> context)
+    public async Task Consume(ConsumeContext<UpdateUserCommand> context)
     {
         _logger.LogInformation("Received Text: {Text}", context.Message);
         _objectsRepository.Add(context.Message);
